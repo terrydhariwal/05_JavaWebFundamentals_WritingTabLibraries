@@ -1,0 +1,11 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <short-name>simple-tags</short-name>
+    <uri>http://mantiso.com/simple</uri>
+    <jsp-version>2.2</jsp-version>
+
+    <tag-file>
+        <name>helloworld</name>
+        <path>/META-INF/tags/helloworld.tag</path>
+    </tag-file>
+</taglib>

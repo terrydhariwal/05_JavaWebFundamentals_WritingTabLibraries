@@ -1,5 +1,6 @@
 <%@ page import="java.util.Calendar" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://mantiso.com/simple" prefix="m" %>
 <%@ taglib prefix="st" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
@@ -69,7 +70,7 @@ ${_header}
 
                     </div>
                     <div class="tab-pane active" id="profile">
-                        <st:helloworld name="${user.name}"></st:helloworld>
+                        <m:helloworld name="${user.name}"></m:helloworld>
                         <c:if test="${!empty user}">
                         <st:profile user="${user}" ></st:profile>
                         </c:if>
