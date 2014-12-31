@@ -31,7 +31,20 @@ ${_header}
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane" id="home">
-                        Home
+                        <st:priority user="${user}">
+                            <jsp:attribute name="normalPriority">
+                                <li>
+                                    <span>${description}</span>
+                                    <span>${priority}</span>
+                                </li>
+                            </jsp:attribute>
+                            <jsp:attribute name="highPriority" >
+                                <li class="highPriority">
+                                    <span>${description}</span>
+                                    <span>${priority}</span>
+                                </li>
+                            </jsp:attribute>
+                        </st:priority>
                     </div>
                     <div class="tab-pane" id="signin">
                         <div class="${app["formCssClass"]["name"]}">
