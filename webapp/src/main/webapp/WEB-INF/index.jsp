@@ -1,5 +1,6 @@
 <%@ page import="java.util.Calendar" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="st" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +33,7 @@ ${_header}
                     <div class="tab-pane" id="home">
                         Home
                     </div>
-                    <div class="tab-pane active" id="signin">
+                    <div class="tab-pane" id="signin">
                         <div class="${app["formCssClass"]["name"]}">
                             <c:choose>
                                 <c:when test="${!empty user.name}">
@@ -54,8 +55,11 @@ ${_header}
                         </div>
 
                     </div>
-                    <div class="tab-pane" id="profile">
-                        Profile
+                    <div class="tab-pane active" id="profile">
+                        <st:helloworld name="${user.name}"></st:helloworld>
+                        <c:if test="${!empty user}">
+                        <st:profile user="${user}" ></st:profile>
+                        </c:if>
                     </div>
                     <div class="tab-pane" id="messages">
                         Messages
