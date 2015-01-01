@@ -32,6 +32,9 @@ ${_header}
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane" id="home">
+                        <m:repeat repeat="5">
+                            <m:Simple></m:Simple><br/>
+                        </m:repeat>
                         <st:priority user="${user}">
                             <jsp:attribute name="normalPriority">
                                 <li>

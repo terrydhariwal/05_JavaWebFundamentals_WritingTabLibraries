@@ -8,4 +8,21 @@
         <name>helloworld</name>
         <path>/META-INF/tags/helloworld.tag</path>
     </tag-file>
+
+    <tag>
+        <name>Simple</name>
+        <tag-class>com.mantiso.Simple</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <name>repeat</name>
+        <tag-class>com.mantiso.Repeater</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>repeat</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
 </taglib>
